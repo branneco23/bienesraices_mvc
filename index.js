@@ -1,16 +1,11 @@
 import express from 'express';
+import usuarioRoutes from './routes/usuariosRoutes.js'
 
 //Crear la app
 const app = express()
 
 //Routing
-app.get('/', function(res, req) {
-    res.json({msg: 'Hola Mundo en express'});
-});
-
-app.get('/nosotros', function(res, req) {
-    res.send('información de nosotros');
-});
+app.use('/', usuarioRoutes)
 
 //Definir un puerto y arrancar el proyecto
 const port = 3000;
