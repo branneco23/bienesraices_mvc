@@ -4,7 +4,8 @@
   "description": "Mi primer proyecto de Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " node ./index.js ",
+    "server": " nodemon index.js "
   },
   "keywords": [
     "MVC",
@@ -14,5 +15,11 @@
     "Sequelize"
   ],
   "author": "Andres Medina Correa",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
