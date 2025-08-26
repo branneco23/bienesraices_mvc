@@ -2,12 +2,12 @@ import express from "express";
 
 const router = express.Router();
 
-router.get('/', function(res, req) {
+router.get('/', (req, res) => {
     res.json({msg: 'Hola Mundo en express'});
 });
 
-router.get('/nosotros', function(res, req) {
-    res.send('información de nosotros');
+router.post('/', (req, res) => {
+    res.json({msg: 'información de nosotros'});
 });
 
 export default router
