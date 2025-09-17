@@ -7,11 +7,12 @@ const app = express()
 
 //Habilitar lectura de datos de formularios
 app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 
 // Conexión a la base de datos
 try {
     await db.authenticate();
-    db.sync()
+    await db.sync()
     console.log("Conexión Correcta a la Base de Datos");
 } catch (error) {
     console.error(error)
@@ -26,8 +27,6 @@ app.use(express.static('public'))
 
 //Routing
 app.use('/auth', usuarioRoutes)
-
-
 
 //Definir un puerto y arrancar el proyecto
 const port = 3000;
